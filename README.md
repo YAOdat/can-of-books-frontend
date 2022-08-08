@@ -19,3 +19,17 @@
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+
+_____________________
+
+
+Name of feature: Auth0
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 5:00 PM
+
+Finish time: 8:03 PM
+
+Actual time needed to complete: 3 hours and 3 minutes
