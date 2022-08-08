@@ -8,21 +8,35 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Login from './components/Login'
+import { withAuth0 } from '@auth0/auth0-react';
+import Welcome from './components/Welcome'
+import Logout from './components/Logout'
+import Profile from './components/Profile'
 
 class App extends React.Component {
   render() {
+    const { isAuthenticated } = this.props.auth0;
+
     return (
       <>
         <Router>
           <Header />
           <Routes>
-            <Route 
+            {isAuthenticated && (
+           <Route 
               exact path="/"
               element={<BestBooks />}
             >
             </Route>
+            )}
             {/* PLACEHOLDER: add a route with a path of '/about' that renders the `About` component */}
           </Routes>
+            <Welcome />
+            <Login/> 
+            <Logout/>
+            <Profile/>
+
           <Footer />
         </Router>
       </>
@@ -30,4 +44,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withAuth0(App);
