@@ -16,7 +16,7 @@ class BestBooks extends React.Component {
   /* TODO: Make a GET request to your API to fetch all the books from the database  */
 
   getBooks = async () => {
-    const bookData = await axios.get('http://localhost:3001/books');
+    const bookData = await axios.get('https://odat-library.herokuapp.com/books');
     
     this.setState({ books: bookData.data });
 
