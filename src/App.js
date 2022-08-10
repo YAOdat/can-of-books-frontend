@@ -13,6 +13,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 import Welcome from './components/Welcome'
 import Logout from './components/Logout'
 import Profile from './components/Profile'
+import About from './About.js'
 
 class App extends React.Component {
   render() {
@@ -21,7 +22,13 @@ class App extends React.Component {
     return (
       <>
         <Router>
+          
           <Header />
+
+          <Welcome />
+          <Profile/>
+
+         
           <Routes>
             {isAuthenticated && (
            <Route 
@@ -29,14 +36,22 @@ class App extends React.Component {
               element={<BestBooks />}
             >
             </Route>
-            )}
-            {/* PLACEHOLDER: add a route with a path of '/about' that renders the `About` component */}
-          </Routes>
-            <Welcome />
-            <Login/> 
-            <Logout/>
-            <Profile/>
 
+            
+            )}
+
+
+            <Route 
+              exact path="/About"
+              element={<About />}
+              
+            >
+
+            </Route>
+           
+          </Routes>
+          
+              
           <Footer />
         </Router>
       </>
