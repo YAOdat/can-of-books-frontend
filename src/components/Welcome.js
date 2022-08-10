@@ -8,7 +8,7 @@ class Welcome extends React.Component {
         return (
             !isAuthenticated &&( <> 
                 <h3>Welcome to Your Can of Books!</h3>
-                <p>Plase login your account:</p>
+                <p>Plase log into your account</p>
             </>)
         );
     }

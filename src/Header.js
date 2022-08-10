@@ -10,7 +10,7 @@ class Header extends React.Component {
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand>My Favorite Books</Navbar.Brand>
         <NavItem><Link to="/" className="nav-link">Home | &nbsp; </Link></NavItem>
-        <NavItem><Link to="/" className="nav-link">| About COB &nbsp; &nbsp; &nbsp;</Link></NavItem>
+        <NavItem><Link to="/About" className="nav-link">| About COB &nbsp; &nbsp; &nbsp;</Link></NavItem>
         <AuthButtons/>
         {/* PLACEHOLDER: render a navigation link to the about page */}
       </Navbar>
